@@ -91,3 +91,4 @@ mUiHandler.post(new Runnable() {
         - Volatile basically tells the compiler that the value of the data must *never be cached* as its value may change outside of the scope of the program/threads
 2. Atomicity
     - Only **One thread** or process can execute a block of code at a time
+    - in Java, *java.util.concurrent.atomic* provides API for the program to use **atomic variables**, these atomic variables ensure that when a thread is doing read/modify/write operation onto this variable, other threads are blocked to access the shared atomic variables and have to wait for that single thread to complete its task.
