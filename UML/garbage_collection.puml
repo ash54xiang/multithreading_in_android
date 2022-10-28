@@ -1,7 +1,9 @@
 @startuml Garbage Collection
 
-Root <-- MyClass1
-MyClass1 <-- MyClass2 
+Root <-- MyClass1 : referenced
+MyClass1 <-- MyClass2 : referenced
+
+
 
 
 @enduml
