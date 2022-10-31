@@ -92,3 +92,8 @@ mUiHandler.post(new Runnable() {
 2. Atomicity
     - Only **One thread** or process can execute a block of code at a time
     - in Java, *java.util.concurrent.atomic* provides API for the program to use **atomic variables**, these atomic variables ensure that when a thread is doing read/modify/write operation onto this variable, other threads are blocked to access the shared atomic variables and have to wait for that single thread to complete its task.
+
+## Threads Synchronization in Android
+- Talking Stick concept:
+    - When a thread is holding a talking stick, that thread has the power to complete all of its tasks, and it will pass the talking stick to the next thread to let the other threads execute their tasks.
+    -This can be done by using ```synchronized(LOCK) { all tasks for the thread }``` where LOCK is an abstract object ```private static final Object LOCK = new Object();```
