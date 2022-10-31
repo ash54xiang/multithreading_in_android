@@ -96,4 +96,6 @@ mUiHandler.post(new Runnable() {
 ## Threads Synchronization in Android
 - Talking Stick concept:
     - When a thread is holding a talking stick, that thread has the power to complete all of its tasks, and it will pass the talking stick to the next thread to let the other threads execute their tasks.
-    -This can be done by using ```synchronized(LOCK) { all tasks for the thread }``` where LOCK is an abstract object ```private static final Object LOCK = new Object();```
+    -This can be done by using ```synchronized(LOCK) { all tasks for the thread }``` where **LOCK** is an abstract object ```private static final Object LOCK = new Object();```
+- Synchronization ensures both visibility and atomicity.
+- But do take note that synchronization might cause performance issue, as multiple threads which need the LOCK to exeucte their tasks, will be required to wait for other thread releases the LOCK.
